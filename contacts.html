@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="stylesheet" href="/assets/css/hf.css">
+</head>
+<body>
+  <!-- Contact Section -->
+   <section>
+    <div class="contact-container">
+      <!-- Contact Info -->
+      <div class="box">
+        <h2>Get in Touch</h2>
+        <div class="info-item">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <p>Monubairwa9950@gmail.com</p>
+            <small>For general inquiries</small>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-phone-alt fa-flip-horizontal"></i>
+          <div>
+            <p>+91-6377847429</p>
+            <small>Available during Any hours</small>
+          </div>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <p>Pratap Nagar, Pannadhay Circle, sanganer, Jaipur, 302033 Rajasthan (India)</p>
+            <small>
+              <a href="https://maps.app.goo.gl/etXv3CLYrRec6jCE9" target="_blank"
+                style="color: var(--primary); text-decoration: none;">
+                View on map →
+              </a>
+            </small>
+
+          </div>
+        </div>
+        <hr>
+        <div class="info-item">
+          <i class="far fa-clock"></i>
+          <div class="office-hours">
+            <h3>Contact Hours</h3>
+            <p>Monday - Friday: 9:30 AM - 6:30 PM</p>
+            <p>Saturday: 9:30 AM - 6:30 PM <small>(2nd & 4th Saturday Closed)</small></p>
+            <p>Sunday: Closed</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="box">
+        <h2>Contact Form</h2>
+        <form id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" placeholder="Your email address" required />
+          </div>
+          <div class="form-group">
+            <input type="number" id="phone" placeholder="Your phone number" required />
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" placeholder="Subject Or Purpose" required />
+          </div>
+          <div class="form-group">
+            <textarea id="message" placeholder="Write your message..." required></textarea>
+          </div>
+          
+          <button type="submit" class="send-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <div class="find-us">
+    <h2>Find Us</h2>
+    <p>Visit our Home or get in touch with us through the contact information above.</p>
+    <div class="map-box" style="width:100%;">
+  
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2749.5910978157776!2d75.81939577408986!3d26.807432564609506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396dc9ecdc427f4d%3A0x2a40fca41729504c!2sPannadhay%20Cir%2C%20Pratap%20Nagar%2C%20Jaipur%2C%20Rajasthan%20302033!5e1!3m2!1sen!2sin!4v1757568700771!5m2!1sen!2sin" 
+  width="100%" 
+  height="450%" 
+  style="border:0;" 
+  allowfullscreen="" 
+  loading="lazy" 
+  referrerpolicy="no-referrer-when-downgrade">
+
+  </iframe>
+</div>
+    </section>
+    <style>
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  } 
+</style>
+<div id="header"></div>
+  <div id="footer"></div>
+  <script>
+    fetch('includes/header.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('header').innerHTML = data);
+    fetch('includes/footer.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('footer').innerHTML = data);
+  </script>
+  <button id="scrollTopBtn" class="scroll-top-btn" title="Back to Top">↑</button>
+<script src="/assets/js/contact.js"></script>
+<script src="/assets/js/hf.js"></script>
+</body>
+</html>
