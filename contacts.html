@@ -71,11 +71,12 @@
           <div class="form-group">
             <textarea id="message" placeholder="Write your message..." required></textarea>
           </div>
-          
+        
           <button type="submit" class="send-btn">
             <i class="fas fa-paper-plane"></i> Send Message
           </button>
         </form>
+
       </div>
     </div>
   </section>
@@ -104,6 +105,31 @@
 </style>
 <div id="header"></div>
   <div id="footer"></div>
+    <script>
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let subject = document.getElementById("subject").value;
+    let message = document.getElementById("message").value;
+
+    let whatsappNumber = "6377847429";
+
+    let finalMessage = `*New Contact Form Message*%0A%0A
+*Name:* ${name}%0A
+*Email:* ${email}%0A
+*Phone:* ${phone}%0A
+*Subject:* ${subject}%0A
+*Message:* ${message}`;
+
+    let whatsappURL = `https://wa.me/${whatsappNumber}?text=${finalMessage}`;
+
+    window.open(whatsappURL, "_blank");
+});
+</script>
+
   <script>
     fetch('includes/header.html')
       .then(res => res.text())
@@ -116,4 +142,5 @@
 <script src="/assets/js/contact.js"></script>
 <script src="/assets/js/hf.js"></script>
 </body>
+
 </html>
